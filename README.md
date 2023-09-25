@@ -10,7 +10,8 @@ and make a pull request to this repository.
 ## The `block-index` file and directory structure
 
 ```bash
-addons/         # A directory containing `addons.extensions.kubeblocks.io` manifests.
-plugins/        # A directory containing `cliplugins.extensions.kubeblocks.io` manifests.
-krew-plugins/   # A directory containing `plugins.krew.googlecontainertools.github.com` manifests.
+addons/              # A directory containing `addons.extensions.kubeblocks.io` manifests.
+applications/        # A directory containing `applications.extensions.kubeblocks.io` manifests.
+cli-plugins/         # A directory containing `cliplugins.extensions.kubeblocks.io` manifests.
+krew-plugins/        # A directory containing `plugins.krew.googlecontainertools.github.com` manifests.
 ```
