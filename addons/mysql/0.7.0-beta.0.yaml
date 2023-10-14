@@ -1,33 +1,31 @@
 apiVersion: extensions.kubeblocks.io/v1alpha1
 kind: Addon
 metadata:
-  name: oracle-mysql
+  name: mysql
   annotations:
     addons.extensions.kubeblocks.io/default-is-empty: "true"
     meta.helm.sh/release-name: kubeblocks
     meta.helm.sh/release-namespace: kb-system
-    xx.kubeblocks.io/kubeblocks-version: ">= 0.6.3"
+    xx.kubeblocks.io/kubeblocks-version: ">= 0.7.0-beta.0"
     xx.kubeblocks.io/model: RDBMS
   labels:
     app.kubernetes.io/instance: kubeblocks
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: kubeblocks
-    app.kubernetes.io/version: 0.6.3
-    helm.sh/chart: kubeblocks-0.6.3
+    app.kubernetes.io/version: 0.7.0-beta.0
+    helm.sh/chart: kubeblocks-0.7.0-beta.0
     kubeblocks.io/provider: community
 spec:
   description: 'MySQL is a widely used, open-source relational database management system (RDBMS).'
 
   type: Helm
-  helm:
-    # todo: not found
-    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/oracle-mysql-0.7.0-beta.0/oracle-mysql-0.7.0-beta.0.tgz"
-    chartLocationURL: "https://jihulab.com/api/v4/projects/85949/packages/helm/stable/charts/oracle-mysql-0.7.0-beta.0.tgz"
 
-    installOptions:
+  helm:
+    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/mysql-0.7.0-beta.0/mysql-0.7.0-beta.0.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/mysql-0.7.0-beta.0.tgz"
 
   installable:
-    autoInstall: false
+    autoInstall: true
 
   defaultInstallValues:
-    - enabled: false
+    - enabled: true
