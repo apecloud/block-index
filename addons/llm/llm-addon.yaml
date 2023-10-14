@@ -20,13 +20,10 @@ spec:
   type: Helm
 
   helm:
-    {{- include "kubeblocks.addonChartLocationURL" ( dict "name" "llm" "version" (default .Chart.Version .Values.versionOverride) "values" .Values) | indent 4 }}
-    {{- include "kubeblocks.addonChartsImage" . | indent 4 }}
+    # todo: 404 not found
+    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/llm-0.7.0-beta.0/llm-0.7.0-beta.0.tgz"
 
     installOptions:
-      {{- if hasPrefix "oci://" .Values.addonChartLocationBase }}
-      version: 0.1.0
-      {{- end }}
 
     valuesMapping:
       valueMap:
@@ -43,11 +40,9 @@ spec:
           requests: resources.requests.memory
           limits: resources.limits.memory
 
-  defaultInstallValues:
-  - replicas: 1
-    {{- with .Values.tolerations }}
-    tolerations: {{ toJson . | quote }}
-    {{- end }}
+    defaultInstallValues:
+      - replicas: 1
+        tolerations: "[{\"effect\":\"NoSchedule\",\"key\":\"kb-controller\",\"operator\":\"Equal\",\"value\":\"true\"}]"
 
-  installable:
-    autoInstall: false
+    installable:
+      autoInstall: false

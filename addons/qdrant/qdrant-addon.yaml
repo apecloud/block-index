@@ -1,6 +1,7 @@
 apiVersion: extensions.kubeblocks.io/v1alpha1
 kind: Addon
 metadata:
+  name: qdrant
   annotations:
     addons.extensions.kubeblocks.io/default-is-empty: "true"
     meta.helm.sh/release-name: kubeblocks
@@ -20,19 +21,14 @@ spec:
   type: Helm
 
   helm:
-    {{- include "kubeblocks.addonChartLocationURL" ( dict "name" "qdrant" "version" (default .Chart.Version .Values.versionOverride) "values" .Values) | indent 4 }}
-    {{- include "kubeblocks.addonChartsImage" . | indent 4 }}
+    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/qdrant-0.6.3/qdrant-0.6.3.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/85949/packages/helm/stable/charts/qdrant-0.6.3.tgz"
 
     installOptions:
-      {{- if hasPrefix "oci://" .Values.addonChartLocationBase }}
-      version: {{ default .Chart.Version .Values.versionOverride }}
-      {{- end }}
 
   installable:
     autoInstall: false
 
   defaultInstallValues:
     - enabled: false
-      {{- with .Values.tolerations }}
-      tolerations: {{ toJson . | quote }}
-      {{- end }}
+      tolerations: "[{\"effect\":\"NoSchedule\",\"key\":\"kb-controller\",\"operator\":\"Equal\",\"value\":\"true\"}]"

@@ -21,19 +21,15 @@ spec:
   type: Helm
 
   helm:
-    {{- include "kubeblocks.addonChartLocationURL" ( dict "name" "milvus" "version" (default .Chart.Version .Values.versionOverride) "values" .Values) | indent 4 }}
-    {{- include "kubeblocks.addonChartsImage" . | indent 4 }}
+#    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/milvus-0.6.3/milvus-0.6.3.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/85949/packages/helm/stable/charts/milvus-0.6.3.tgz"
+
 
     installOptions:
-      {{- if hasPrefix "oci://" .Values.addonChartLocationBase }}
-      version: {{ default .Chart.Version .Values.versionOverride }}
-      {{- end }}
 
   installable:
     autoInstall: false
 
   defaultInstallValues:
     - enabled: false
-      {{- with .Values.tolerations }}
-      tolerations: {{ toJson . | quote }}
-      {{- end }}
+      tolerations: "[{\"effect\":\"NoSchedule\",\"key\":\"kb-controller\",\"operator\":\"Equal\",\"value\":\"true\"}]"

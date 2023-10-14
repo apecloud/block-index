@@ -20,13 +20,11 @@ spec:
   type: Helm
 
   helm:
-    {{- include "kubeblocks.addonChartLocationURL" ( dict "name" "victoria-metrics-agent" "version" "0.8.41" "values" .Values) | indent 4 }}
-    {{- include "kubeblocks.addonChartsImage" . | indent 4 }}
+
+    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/victoria-metrics-agent-0.8.41/victoria-metrics-agent-0.8.41.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/85949/packages/helm/stable/charts/victoria-metrics-agent-0.8.41.tgz"
 
     installOptions:
-      {{- if hasPrefix "oci://" .Values.addonChartLocationBase }}
-      version: 0.8.41
-      {{- end }}
 
     valuesMapping:
       valueMap:
@@ -42,12 +40,10 @@ spec:
         memory:
           requests: resources.requests.memory
           limits: resources.limits.memory
-  
+
   defaultInstallValues:
-  - replicas: 1
-    {{- with .Values.tolerations }}
-    tolerations: {{ toJson . | quote }}
-    {{- end }}
+    - replicas: 1
+      tolerations: "[{\"effect\":\"NoSchedule\",\"key\":\"kb-controller\",\"operator\":\"Equal\",\"value\":\"true\"}]"
 
   installable:
-    autoInstall: false 
+    autoInstall: false

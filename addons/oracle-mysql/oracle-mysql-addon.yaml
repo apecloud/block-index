@@ -19,15 +19,12 @@ spec:
   description: 'MySQL is a widely used, open-source relational database management system (RDBMS).'
 
   type: Helm
-
   helm:
-    {{- include "kubeblocks.addonChartLocationURL" ( dict "name" "oracle-mysql" "version" (default .Chart.Version .Values.versionOverride) "values" .Values) | indent 4 }}
-    {{- include "kubeblocks.addonChartsImage" . | indent 4 }}
+    # todo: not found
+    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/oracle-mysql-0.7.0-beta.0/oracle-mysql-0.7.0-beta.0.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/85949/packages/helm/stable/charts/oracle-mysql-0.7.0-beta.0.tgz"
 
     installOptions:
-      {{- if hasPrefix "oci://" .Values.addonChartLocationBase }}
-      version: {{ default .Chart.Version .Values.versionOverride }}
-      {{- end }}
 
   installable:
     autoInstall: false

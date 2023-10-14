@@ -21,13 +21,10 @@ spec:
   type: Helm
 
   helm:
-    {{- include "kubeblocks.addonChartLocationURL" ( dict "name" "mongodb" "version" (default .Chart.Version .Values.versionOverride) "values" .Values) | indent 4 }}
-    {{- include "kubeblocks.addonChartsImage" . | indent 4 }}
+#    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/mongodb-0.6.3/mongodb-0.6.3.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/85949/packages/helm/stable/charts/mongodb-0.6.3.tgz"
 
     installOptions:
-      {{- if hasPrefix "oci://" .Values.addonChartLocationBase }}
-      version: {{ default .Chart.Version .Values.versionOverride }}
-      {{- end }}
 
   installable:
     autoInstall: true

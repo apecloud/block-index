@@ -21,6 +21,7 @@ spec:
   type: Helm
 
   helm:
+    # todo: both are 404
     #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/apecloud-mysql-cluster-0.6.3/apecloud-mysql-cluster-0.6.3.tgz"
     chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/greptimedb-0.7.0-beta.0/greptimedb-0.7.0-beta.0.tgz"
 
