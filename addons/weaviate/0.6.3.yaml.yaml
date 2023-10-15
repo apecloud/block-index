@@ -4,16 +4,10 @@ metadata:
   name: weaviate
   annotations:
     addons.extensions.kubeblocks.io/default-is-empty: "true"
-    meta.helm.sh/release-name: kubeblocks
-    meta.helm.sh/release-namespace: kb-system
     xx.kubeblocks.io/kubeblocks-version: ">= 0.6.3"
     xx.kubeblocks.io/model: Vector-DBMS
   labels:
-    app.kubernetes.io/instance: kubeblocks
-    app.kubernetes.io/managed-by: Helm
-    app.kubernetes.io/name: kubeblocks
     app.kubernetes.io/version: 0.6.3
-    helm.sh/chart: kubeblocks-0.6.3
     kubeblocks.io/provider: community
 spec:
   description: 'Weaviate is an open-source (BSD-3.0 licensed)  vector database. It allows you to store data objects and vector embeddings from your favorite ML-models, and scale seamlessly into billions of data objects.'
