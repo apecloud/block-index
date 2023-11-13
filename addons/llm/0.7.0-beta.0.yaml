@@ -4,10 +4,10 @@ metadata:
   name: llm
   annotations:
     addons.extensions.kubeblocks.io/default-is-empty: "true"
-    xx.kubeblocks.io/kubeblocks-version: ">= 0.7.0-beta.0"
+    xx.kubeblocks.io/kubeblocks-version: ">= 0.7.0"
     xx.kubeblocks.io/model: LLM
   labels:
-    app.kubernetes.io/version: 0.7.0-beta.0
+    app.kubernetes.io/version: 0.7.0
     kubeblocks.io/provider: apecloud
 spec:
   description: The large language model.
@@ -15,8 +15,8 @@ spec:
 
   helm:
     # todo: 404 not found
-    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/llm-0.7.0-beta.0/llm-0.7.0-beta.0.tgz"
-    chartLocationURL: "https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/llm-0.7.0-beta.0.tgz"
+    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/llm-0.7.0/llm-0.7.0.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/llm-0.7.0.tgz"
 
     installOptions:
 

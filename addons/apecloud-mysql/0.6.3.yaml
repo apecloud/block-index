@@ -4,7 +4,7 @@ metadata:
   name: apecloud-mysql
   annotations:
     addons.extensions.kubeblocks.io/default-is-empty: "true"
-    xx.kubeblocks.io/kubeblocks-version: ">= 0.6.3 && < 0.7.0-beta.0 "
+    xx.kubeblocks.io/kubeblocks-version: ">= 0.6.3 && < 0.7.0 "
     xx.kubeblocks.io/model: RDBMS
   labels:
     app.kubernetes.io/version: 0.6.3

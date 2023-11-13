@@ -4,10 +4,10 @@ metadata:
   name: starrocks
   annotations:
     addons.extensions.kubeblocks.io/default-is-empty: "true"
-    xx.kubeblocks.io/kubeblocks-version: ">= 0.7.0-beta.0"
+    xx.kubeblocks.io/kubeblocks-version: ">= 0.7.0"
     xx.kubeblocks.io/model: RDBMS
   labels:
-    app.kubernetes.io/version: 0.7.0-beta.0
+    app.kubernetes.io/version: 0.7.0
     kubeblocks.io/provider: community
 spec:
   description: 'Starrocks is an open-source, high-performance analytical database.'
@@ -15,8 +15,8 @@ spec:
   type: Helm
 
   helm:
-    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/starrocks-0.7.0-beta.0/starrocks-0.7.0-beta.0.tgz"
-    chartLocationURL: "https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/starrocks-0.7.0-beta.0.tgz"
+    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/starrocks-0.7.0/starrocks-0.7.0.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/starrocks-0.7.0.tgz"
 
     installOptions:
 

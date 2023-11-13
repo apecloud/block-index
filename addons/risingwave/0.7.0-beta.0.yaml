@@ -4,10 +4,10 @@ metadata:
   name: risingwave
   annotations:
     addons.extensions.kubeblocks.io/default-is-empty: "true"
-    xx.kubeblocks.io/kubeblocks-version: ">= 0.7.0-beta.0"
+    xx.kubeblocks.io/kubeblocks-version: ">= 0.7.0"
     xx.kubeblocks.io/model: RDBMS
   labels:
-    app.kubernetes.io/version: 0.7.0-beta.0
+    app.kubernetes.io/version: 0.7.0
     kubeblocks.io/provider: community
 spec:
   description: 'RisingWave is a distributed SQL streaming database.'
@@ -15,8 +15,8 @@ spec:
   type: Helm
 
   helm:
-    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/risingwave-0.7.0-beta.0/risingwave-0.7.0-beta.0.tgz"
-    chartLocationURL: "https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/risingwave-0.7.0-beta.0.tgz"
+    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/risingwave-0.7.0/risingwave-0.7.0.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/risingwave-0.7.0.tgz"
 
     installOptions:
 
