@@ -1,0 +1,29 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  name: orioledb
+  annotations:
+    addons.extensions.kubeblocks.io/default-is-empty: "true"
+    xx.kubeblocks.io/kubeblocks-version: ">= 0.7.0"
+    xx.kubeblocks.io/model: RDBMS
+  labels:
+    app.kubernetes.io/version: 0.7.0
+    kubeblocks.io/provider: apecloud
+spec:
+  description: 'OrioleDB – a modern cloud-native storage engine solving some PostgreSQL wicked problems.'
+
+  type: Helm
+
+  helm:
+    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/orioledb-0.7.0/orioledb-0.7.0.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/orioledb-0.7.0.tgz"
+
+
+    installOptions:
+
+  installable:
+    autoInstall: false
+
+  defaultInstallValues:
+    - enabled: false
+      tolerations: "[{\"effect\":\"NoSchedule\",\"key\":\"kb-controller\",\"operator\":\"Equal\",\"value\":\"true\"}]"

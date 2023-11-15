@@ -1,0 +1,27 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  name: postgresql
+  annotations:
+    addons.extensions.kubeblocks.io/default-is-empty: "true"
+    xx.kubeblocks.io/kubeblocks-version: ">= 0.6.3"
+    xx.kubeblocks.io/model: RDBMS
+  labels:
+    app.kubernetes.io/version: 0.6.3
+    kubeblocks.io/provider: community
+spec:
+  description: 'PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.'
+
+  type: Helm
+
+  helm:
+    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/postgresql-0.6.3/postgresql-0.6.3.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/85949/packages/helm/stable/charts/postgresql-0.6.3.tgz"
+
+    installOptions:
+
+  installable:
+    autoInstall: true
+
+  defaultInstallValues:
+    - enabled: true

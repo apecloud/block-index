@@ -1,0 +1,26 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  name: greptimedb
+  annotations:
+    addons.extensions.kubeblocks.io/default-is-empty: "true"
+    xx.kubeblocks.io/kubeblocks-version: ">= 0.7.0"
+    xx.kubeblocks.io/model: Time-Series
+  labels:
+    app.kubernetes.io/version: 0.7.0
+    kubeblocks.io/provider: community
+spec:
+  description: 'GreptimeDB is an Apache 2.0 licensed distributed time-series database.'
+
+  type: Helm
+
+  helm:
+    # todo: both are 404
+    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/greptimedb-0.7.0/greptimedb-0.7.0.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/greptimedb-0.7.0.tgz"
+
+  installable:
+    autoInstall: false
+
+  defaultInstallValues:
+    - enabled: true

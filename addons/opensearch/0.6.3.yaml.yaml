@@ -1,0 +1,28 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  name: opensearch
+  annotations:
+    addons.extensions.kubeblocks.io/default-is-empty: "true"
+    xx.kubeblocks.io/kubeblocks-version: ">= 0.6.3"
+    xx.kubeblocks.io/model: Search-Engine
+  labels:
+    app.kubernetes.io/version: 0.6.3
+    kubeblocks.io/provider: community
+spec:
+  description: 'OpenSearch is a scalable, flexible, and extensible open-source software suite for search, analytics, and observability applications licensed under Apache 2.0.'
+
+  type: Helm
+
+  helm:
+    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/opensearch-0.6.3/opensearch-0.6.3.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/85949/packages/helm/stable/charts/opensearch-0.6.3.tgz"
+
+    installOptions:
+
+  installable:
+    autoInstall: false
+
+  defaultInstallValues:
+    - enabled: false
+      tolerations: "[{\"effect\":\"NoSchedule\",\"key\":\"kb-controller\",\"operator\":\"Equal\",\"value\":\"true\"}]"

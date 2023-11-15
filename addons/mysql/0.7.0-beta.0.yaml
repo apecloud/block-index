@@ -1,0 +1,25 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  name: mysql
+  annotations:
+    addons.extensions.kubeblocks.io/default-is-empty: "true"
+    xx.kubeblocks.io/kubeblocks-version: ">= 0.7.0"
+    xx.kubeblocks.io/model: RDBMS
+  labels:
+    app.kubernetes.io/version: 0.7.0
+    kubeblocks.io/provider: community
+spec:
+  description: 'MySQL is a widely used, open-source relational database management system (RDBMS).'
+
+  type: Helm
+
+  helm:
+    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/mysql-0.7.0/mysql-0.7.0.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/mysql-0.7.0.tgz"
+
+  installable:
+    autoInstall: true
+
+  defaultInstallValues:
+    - enabled: true

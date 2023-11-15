@@ -1,0 +1,26 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  name: nebula
+  annotations:
+    addons.extensions.kubeblocks.io/default-is-empty: "true"
+    xx.kubeblocks.io/kubeblocks-version: ">= 0.6.3"
+    xx.kubeblocks.io/model: Graph
+  labels:
+    app.kubernetes.io/version: 0.6.3
+    kubeblocks.io/provider: community
+spec:
+  description: 'NebulaGraph is an Apache 2.0 licensed distributed graph database.'
+
+  type: Helm
+
+  helm:
+    #    chartLocationURL: "https://github.com/apecloud/helm-charts/releases/download/nebula-0.6.3/nebula-0.6.3.tgz"
+    chartLocationURL: "https://jihulab.com/api/v4/projects/85949/packages/helm/stable/charts/nebula-0.6.3.tgz"
+    installOptions:
+
+  installable:
+    autoInstall: false
+
+  defaultInstallValues:
+    - enabled: true
