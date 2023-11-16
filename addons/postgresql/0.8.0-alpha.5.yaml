@@ -6,15 +6,15 @@ metadata:
   labels:
     addon.kubeblocks.io/model: RDBMS
     addon.kubeblocks.io/provider: apecloud
-    app.kubernetes.io/name: foxlake
-    app.kubernetes.io/version: 0.7.0
-  name: foxlake
+    app.kubernetes.io/name: postgresql
+    app.kubernetes.io/version: 0.8.0-alpha.5
+  name: postgresql
 spec:
   defaultInstallValues:
   - enabled: true
-  description: ApeCloud FoxLake is an open-source cloud-native data warehouse.
+  description: A PostgreSQL (with Patroni HA) cluster definition Helm chart for Kubernetes
   helm:
-    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/foxlake-0.7.0.tgz
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/postgresql-0.8.0-alpha.5.tgz
   installable:
     autoInstall: true
   type: Helm

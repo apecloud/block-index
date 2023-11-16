@@ -7,7 +7,7 @@ metadata:
     addon.kubeblocks.io/model: streaming
     addon.kubeblocks.io/provider: apecloud
     app.kubernetes.io/name: kafka
-    app.kubernetes.io/version: 0.7.0
+    app.kubernetes.io/version: 0.8.0-alpha.5
   name: kafka
 spec:
   defaultInstallValues:
@@ -16,7 +16,7 @@ spec:
     real-time pipelines and can be used as a message broker or as a replacement for
     a log aggregation solution for big data applications.
   helm:
-    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/kafka-0.7.0.tgz
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/kafka-0.8.0-alpha.5.tgz
   installable:
     autoInstall: true
   type: Helm

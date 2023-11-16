@@ -3,7 +3,6 @@ kind: Addon
 metadata:
   annotations:
     addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
-    addons.extensions.kubeblocks.io/default-is-empty: 'true'
   labels:
     addon.kubeblocks.io/model: LLM
     addon.kubeblocks.io/provider: community
