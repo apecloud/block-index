@@ -1,0 +1,22 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
+    addons.extensions.kubeblocks.io/default-is-empty: 'true'
+  labels:
+    addon.kubeblocks.io/model: RDBMS
+    addon.kubeblocks.io/provider: community
+    app.kubernetes.io/name: tidb
+    app.kubernetes.io/version: 0.1.0-alpha.1
+  name: tidb
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: TiDB is an open-source, cloud-native, distributed, MySQL-Compatible
+    database for elastic scale and real-time analytics.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/tidb-0.1.0-alpha.1.tgz
+  installable:
+    autoInstall: true
+  type: Helm

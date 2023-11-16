@@ -1,0 +1,22 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
+    addons.extensions.kubeblocks.io/default-is-empty: 'true'
+  labels:
+    addon.kubeblocks.io/model: streaming
+    addon.kubeblocks.io/provider: apecloud
+    app.kubernetes.io/name: pulsar
+    app.kubernetes.io/version: 0.7.0
+  name: pulsar
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: Apache Pulsar is an open-source, distributed messaging and streaming
+    platform built for the cloud.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/pulsar-0.7.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm

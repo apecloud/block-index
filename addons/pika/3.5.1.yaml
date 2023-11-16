@@ -1,0 +1,21 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
+    addons.extensions.kubeblocks.io/default-is-empty: 'true'
+  labels:
+    addon.kubeblocks.io/model: key-value
+    addon.kubeblocks.io/provider: community
+    app.kubernetes.io/name: pika
+    app.kubernetes.io/version: 3.5.1
+  name: pika
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: Pika is a NoSQL database compatible with redis which is developed by Qihoo's infrastructure team.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/pika-3.5.1.tgz
+  installable:
+    autoInstall: true
+  type: Helm

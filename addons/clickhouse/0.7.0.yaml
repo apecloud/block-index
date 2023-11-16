@@ -1,0 +1,23 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
+    addons.extensions.kubeblocks.io/default-is-empty: 'true'
+  labels:
+    addon.kubeblocks.io/model: RDBMS
+    addon.kubeblocks.io/provider: apecloud
+    app.kubernetes.io/name: clickhouse
+    app.kubernetes.io/version: 0.7.0
+  name: clickhouse
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: ClickHouse is an open-source column-oriented OLAP database management
+    system. Use it to boost your database performance while providing linear scalability
+    and hardware efficiency.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/clickhouse-0.7.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm
