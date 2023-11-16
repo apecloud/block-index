@@ -1,0 +1,21 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
+    addons.extensions.kubeblocks.io/default-is-empty: 'true'
+  labels:
+    addon.kubeblocks.io/model: RDBMS
+    addon.kubeblocks.io/provider: apecloud
+    app.kubernetes.io/name: official-postgresql
+    app.kubernetes.io/version: 0.8.0-alpha.5
+  name: official-postgresql
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: A Official PostgreSQL cluster definition Helm chart for Kubernetes
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/official-postgresql-0.8.0-alpha.5.tgz
+  installable:
+    autoInstall: true
+  type: Helm
