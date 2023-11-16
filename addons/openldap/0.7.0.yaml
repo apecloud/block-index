@@ -1,0 +1,23 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
+    addons.extensions.kubeblocks.io/default-is-empty: 'true'
+  labels:
+    addon.kubeblocks.io/model: other
+    addon.kubeblocks.io/provider: apecloud
+    app.kubernetes.io/name: openldap
+    app.kubernetes.io/version: 0.7.0
+  name: openldap
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: The OpenLDAP Project is a collaborative effort to develop a robust,
+    commercial-grade, fully featured, and open source LDAP suite of applications and
+    development tools. This chart provides KubeBlocks'
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/openldap-0.7.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm

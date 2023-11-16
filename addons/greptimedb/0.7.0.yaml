@@ -1,0 +1,22 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
+    addons.extensions.kubeblocks.io/default-is-empty: 'true'
+  labels:
+    addon.kubeblocks.io/model: time-series
+    addon.kubeblocks.io/provider: community
+    app.kubernetes.io/name: greptimedb
+    app.kubernetes.io/version: 0.7.0
+  name: greptimedb
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: An open-source, cloud-native, distributed time-series database with
+    PromQL/SQL/Python supported.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/greptimedb-0.7.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm

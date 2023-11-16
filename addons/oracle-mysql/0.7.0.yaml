@@ -1,0 +1,22 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
+    addons.extensions.kubeblocks.io/default-is-empty: 'true'
+  labels:
+    addon.kubeblocks.io/model: RDBMS
+    addon.kubeblocks.io/provider: apecloud
+    app.kubernetes.io/name: oracle-mysql
+    app.kubernetes.io/version: 0.7.0
+  name: oracle-mysql
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: MySQL is a widely used, open-source relational database management
+    system (RDBMS)
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/oracle-mysql-0.7.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm

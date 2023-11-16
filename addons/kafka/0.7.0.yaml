@@ -1,0 +1,23 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
+    addons.extensions.kubeblocks.io/default-is-empty: 'true'
+  labels:
+    addon.kubeblocks.io/model: streaming
+    addon.kubeblocks.io/provider: apecloud
+    app.kubernetes.io/name: kafka
+    app.kubernetes.io/version: 0.7.0
+  name: kafka
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: Apache Kafka is a distributed streaming platform designed to build
+    real-time pipelines and can be used as a message broker or as a replacement for
+    a log aggregation solution for big data applications.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/kafka-0.7.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm
