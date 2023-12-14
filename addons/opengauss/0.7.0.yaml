@@ -1,0 +1,20 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.7.0-0, <0.8.0-0'
+  labels:
+    addon.kubeblocks.io/model: RDBMS
+    addon.kubeblocks.io/provider: apecloud
+    app.kubernetes.io/name: opengauss
+    app.kubernetes.io/version: 0.7.0
+  name: opengauss
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: A Helm chart for Kubernetes
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/opengauss-0.7.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm
