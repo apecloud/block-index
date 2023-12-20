@@ -5,8 +5,8 @@ metadata:
     addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
   labels:
     addon.kubeblocks.io/model: time-series
-    addon.kubernetes.io/name: influxdb
-    addon.kubernetes.io/version: 0.7.0
+    addon.kubeblocks.io/name: influxdb
+    addon.kubeblocks.io/version: 0.7.0
     category: Database
     licenses: Apache-2.0
   name: influxdb

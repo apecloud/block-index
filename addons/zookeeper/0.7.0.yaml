@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: other
     addon.kubeblocks.io/provider: community
-    addon.kubernetes.io/name: zookeeper
-    addon.kubernetes.io/version: 0.7.0
+    addon.kubeblocks.io/name: zookeeper
+    addon.kubeblocks.io/version: 0.7.0
   name: zookeeper
 spec:
   defaultInstallValues:

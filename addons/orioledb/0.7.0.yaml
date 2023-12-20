@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: RDBMS
     addon.kubeblocks.io/provider: apecloud
-    addon.kubernetes.io/name: orioledb
-    addon.kubernetes.io/version: 0.7.0
+    addon.kubeblocks.io/name: orioledb
+    addon.kubeblocks.io/version: 0.7.0
   name: orioledb
 spec:
   defaultInstallValues:

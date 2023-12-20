@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: RDBMS
     addon.kubeblocks.io/provider: apecloud
-    addon.kubernetes.io/name: apecloud-postgresql
-    addon.kubernetes.io/version: 0.7.0
+    addon.kubeblocks.io/name: apecloud-postgresql
+    addon.kubeblocks.io/version: 0.7.0
   name: apecloud-postgresql
 spec:
   defaultInstallValues:

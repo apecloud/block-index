@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: RDBMS
     addon.kubeblocks.io/provider: community
-    addon.kubernetes.io/name: mysql
-    addon.kubernetes.io/version: 0.7.0
+    addon.kubeblocks.io/name: mysql
+    addon.kubeblocks.io/version: 0.7.0
   name: mysql
 spec:
   defaultInstallValues:

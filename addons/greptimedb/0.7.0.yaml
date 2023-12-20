@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: time-series
     addon.kubeblocks.io/provider: community
-    addon.kubernetes.io/name: greptimedb
-    addon.kubernetes.io/version: 0.7.0
+    addon.kubeblocks.io/name: greptimedb
+    addon.kubeblocks.io/version: 0.7.0
   name: greptimedb
 spec:
   defaultInstallValues:

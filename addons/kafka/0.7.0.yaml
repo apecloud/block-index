@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: streaming
     addon.kubeblocks.io/provider: apecloud
-    addon.kubernetes.io/name: kafka
-    addon.kubernetes.io/version: 0.7.0
+    addon.kubeblocks.io/name: kafka
+    addon.kubeblocks.io/version: 0.7.0
   name: kafka
 spec:
   defaultInstallValues:
