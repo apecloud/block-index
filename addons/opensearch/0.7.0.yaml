@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: search-engine
     addon.kubeblocks.io/provider: community
-    addon.kubernetes.io/name: opensearch
-    addon.kubernetes.io/version: 0.7.0
+    addon.kubeblocks.io/name: opensearch
+    addon.kubeblocks.io/version: 0.7.0
   name: opensearch
 spec:
   defaultInstallValues:

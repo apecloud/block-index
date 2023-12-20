@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: streaming
     addon.kubeblocks.io/provider: apecloud
-    addon.kubernetes.io/name: pulsar
-    addon.kubernetes.io/version: 0.7.0
+    addon.kubeblocks.io/name: pulsar
+    addon.kubeblocks.io/version: 0.7.0
   name: pulsar
 spec:
   defaultInstallValues:

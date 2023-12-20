@@ -11,8 +11,8 @@ metadata:
   labels:
     app.kubernetes.io/instance: kubeblocks
     app.kubernetes.io/managed-by: Helm
-    addon.kubernetes.io/name: kubeblocks
-    addon.kubernetes.io/version: 0.6.3
+    addon.kubeblocks.io/name: kubeblocks
+    addon.kubeblocks.io/version: 0.6.3
     helm.sh/chart: kubeblocks-0.6.3
     addon.kubeblocks.io/provider: community
 spec:

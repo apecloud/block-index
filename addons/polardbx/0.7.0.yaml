@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: RDBMS
     addon.kubeblocks.io/provider: community
-    addon.kubernetes.io/name: polardbx
-    addon.kubernetes.io/version: 0.7.0
+    addon.kubeblocks.io/name: polardbx
+    addon.kubeblocks.io/version: 0.7.0
   name: polardbx
 spec:
   defaultInstallValues:

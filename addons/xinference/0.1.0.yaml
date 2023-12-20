@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: LLM
     addon.kubeblocks.io/provider: community
-    addon.kubernetes.io/name: xinference
-    addon.kubernetes.io/version: 0.1.0
+    addon.kubeblocks.io/name: xinference
+    addon.kubeblocks.io/version: 0.1.0
   name: xinference
 spec:
   defaultInstallValues:

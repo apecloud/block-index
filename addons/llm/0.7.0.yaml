@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: LLM
     addon.kubeblocks.io/provider: apecloud
-    addon.kubernetes.io/name: llm
-    addon.kubernetes.io/version: 0.7.0
+    addon.kubeblocks.io/name: llm
+    addon.kubeblocks.io/version: 0.7.0
   name: llm
 spec:
   defaultInstallValues:
