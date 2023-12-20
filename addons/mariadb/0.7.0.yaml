@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: RDBMS
     addon.kubeblocks.io/provider: community
-    app.kubernetes.io/name: mariadb
-    app.kubernetes.io/version: 0.7.0
+    addon.kubernetes.io/name: mariadb
+    addon.kubernetes.io/version: 0.7.0
   name: mariadb
 spec:
   defaultInstallValues:

@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: RDBMS
     addon.kubeblocks.io/provider: apecloud
-    app.kubernetes.io/name: foxlake
-    app.kubernetes.io/version: 0.7.0
+    addon.kubernetes.io/name: foxlake
+    addon.kubernetes.io/version: 0.7.0
   name: foxlake
 spec:
   defaultInstallValues:

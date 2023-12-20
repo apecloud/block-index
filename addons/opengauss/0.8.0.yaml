@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: RDBMS
     addon.kubeblocks.io/provider: apecloud
-    app.kubernetes.io/name: opengauss
-    app.kubernetes.io/version: 0.8.0
+    addon.kubernetes.io/name: opengauss
+    addon.kubernetes.io/version: 0.8.0
   name: opengauss
 spec:
   defaultInstallValues:

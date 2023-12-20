@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: document
     addon.kubeblocks.io/provider: apecloud
-    app.kubernetes.io/name: mongodb
-    app.kubernetes.io/version: 0.7.0
+    addon.kubernetes.io/name: mongodb
+    addon.kubernetes.io/version: 0.7.0
   name: mongodb
 spec:
   defaultInstallValues:

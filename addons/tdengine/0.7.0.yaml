@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: time-series
     addon.kubeblocks.io/provider: community
-    app.kubernetes.io/name: tdengine
-    app.kubernetes.io/version: 0.7.0
+    addon.kubernetes.io/name: tdengine
+    addon.kubernetes.io/version: 0.7.0
   name: tdengine
 spec:
   defaultInstallValues:

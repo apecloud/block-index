@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: RDBMS
     addon.kubeblocks.io/provider: community
-    app.kubernetes.io/name: oceanbase
-    app.kubernetes.io/version: 0.7.0
+    addon.kubernetes.io/name: oceanbase
+    addon.kubernetes.io/version: 0.7.0
   name: oceanbase
 spec:
   defaultInstallValues:

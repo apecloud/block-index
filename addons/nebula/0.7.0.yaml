@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: graph
     addon.kubeblocks.io/provider: community
-    app.kubernetes.io/name: nebula
-    app.kubernetes.io/version: 0.7.0
+    addon.kubernetes.io/name: nebula
+    addon.kubernetes.io/version: 0.7.0
   name: nebula
 spec:
   defaultInstallValues:

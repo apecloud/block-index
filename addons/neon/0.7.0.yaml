@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: RDBMS
     addon.kubeblocks.io/provider: community
-    app.kubernetes.io/name: neon
-    app.kubernetes.io/version: 0.7.0
+    addon.kubernetes.io/name: neon
+    addon.kubernetes.io/version: 0.7.0
   name: neon
 spec:
   defaultInstallValues:
