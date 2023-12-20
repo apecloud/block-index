@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: other
     addon.kubeblocks.io/provider: apecloud
-    app.kubernetes.io/name: openldap
-    app.kubernetes.io/version: 0.7.0
+    addon.kubernetes.io/name: openldap
+    addon.kubernetes.io/version: 0.7.0
   name: openldap
 spec:
   defaultInstallValues:

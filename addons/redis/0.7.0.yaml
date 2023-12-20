@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: key-value
     addon.kubeblocks.io/provider: apecloud
-    app.kubernetes.io/name: redis
-    app.kubernetes.io/version: 0.7.0
+    addon.kubernetes.io/name: redis
+    addon.kubernetes.io/version: 0.7.0
   name: redis
 spec:
   defaultInstallValues:

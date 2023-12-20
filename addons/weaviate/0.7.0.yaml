@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: vector
     addon.kubeblocks.io/provider: community
-    app.kubernetes.io/name: weaviate
-    app.kubernetes.io/version: 0.7.0
+    addon.kubernetes.io/name: weaviate
+    addon.kubernetes.io/version: 0.7.0
   name: weaviate
 spec:
   defaultInstallValues:

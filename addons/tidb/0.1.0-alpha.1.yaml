@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: RDBMS
     addon.kubeblocks.io/provider: community
-    app.kubernetes.io/name: tidb
-    app.kubernetes.io/version: 0.1.0-alpha.1
+    addon.kubernetes.io/name: tidb
+    addon.kubernetes.io/version: 0.1.0-alpha.1
   name: tidb
 spec:
   defaultInstallValues:

@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: key-value
     addon.kubeblocks.io/provider: community
-    app.kubernetes.io/name: pika
-    app.kubernetes.io/version: 3.5.1
+    addon.kubernetes.io/name: pika
+    addon.kubernetes.io/version: 3.5.1
   name: pika
 spec:
   defaultInstallValues:

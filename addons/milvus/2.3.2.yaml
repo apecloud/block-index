@@ -6,8 +6,8 @@ metadata:
   labels:
     addon.kubeblocks.io/model: vector
     addon.kubeblocks.io/provider: community
-    app.kubernetes.io/name: milvus
-    app.kubernetes.io/version: 2.3.2
+    addon.kubernetes.io/name: milvus
+    addon.kubernetes.io/version: 2.3.2
   name: milvus
 spec:
   defaultInstallValues:
