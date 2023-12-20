@@ -5,8 +5,8 @@ metadata:
     addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
   labels:
     addon.kubeblocks.io/model: vector
-    addon.kubeblocks.io/provider: community
     addon.kubeblocks.io/name: milvus
+    addon.kubeblocks.io/provider: community
     addon.kubeblocks.io/version: 2.3.2
   name: milvus
 spec:

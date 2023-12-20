@@ -5,8 +5,8 @@ metadata:
     addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
   labels:
     addon.kubeblocks.io/model: RDBMS
-    addon.kubeblocks.io/provider: community
     addon.kubeblocks.io/name: tidb
+    addon.kubeblocks.io/provider: community
     addon.kubeblocks.io/version: 0.1.0-alpha.1
   name: tidb
 spec:

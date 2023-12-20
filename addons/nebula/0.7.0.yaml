@@ -5,8 +5,8 @@ metadata:
     addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
   labels:
     addon.kubeblocks.io/model: graph
-    addon.kubeblocks.io/provider: community
     addon.kubeblocks.io/name: nebula
+    addon.kubeblocks.io/provider: community
     addon.kubeblocks.io/version: 0.7.0
   name: nebula
 spec:
