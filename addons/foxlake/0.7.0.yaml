@@ -12,7 +12,7 @@ metadata:
 spec:
   defaultInstallValues:
   - enabled: true
-  description: ApeCloud FoxLake is an open-source cloud-native data warehouse.
+  description: ApeCloud FoxLake is a fast & low-cost analytical MySQL.
   helm:
     chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/foxlake-0.7.0.tgz
   installable:
