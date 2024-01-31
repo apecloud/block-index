@@ -1,0 +1,22 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
+  labels:
+    addon.kubeblocks.io/model: graph
+    addon.kubeblocks.io/name: nebula
+    addon.kubeblocks.io/provider: community
+    addon.kubeblocks.io/version: 0.8.0
+  name: nebula
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: NebulaGraph is a popular open-source graph database that can handle
+    large volumes of data with milliseconds of latency, scale up quickly, and have
+    the ability to perform fast graph analytics.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/nebula-0.8.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm
