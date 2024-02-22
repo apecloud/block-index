@@ -1,0 +1,21 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
+  labels:
+    addon.kubeblocks.io/model: search-engine
+    addon.kubeblocks.io/name: elasticsearch
+    addon.kubeblocks.io/provider: community
+    addon.kubeblocks.io/version: 0.9.0
+  name: elasticsearch
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: Elasticsearch is a distributed, RESTful search engine optimized for
+    speed and relevance on production-scale workloads.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/elasticsearch-0.9.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm
