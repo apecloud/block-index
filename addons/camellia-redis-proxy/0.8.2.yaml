@@ -1,0 +1,21 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.8.2'
+  labels:
+    addon.kubeblocks.io/model: key-value
+    addon.kubeblocks.io/name: camellia-redis-proxy
+    addon.kubeblocks.io/provider: apecloud
+    addon.kubeblocks.io/version: 0.8.2
+  name: camellia-redis-proxy
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: camellia-redis-proxy is a high-performance redis proxy developed using
+    Netty4.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/camellia-redis-proxy-0.8.2.tgz
+  installable:
+    autoInstall: true
+  type: Helm
