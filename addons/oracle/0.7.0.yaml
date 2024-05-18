@@ -1,0 +1,20 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
+  labels:
+    addon.kubeblocks.io/model: RDBMS
+    addon.kubeblocks.io/provider: apecloud
+    app.kubernetes.io/name: oracle
+    app.kubernetes.io/version: 0.7.2
+  name: oracle
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: Oracle 19.3.0-ee add-on for KubeBlocks
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/oracle-0.7.2.tgz
+  installable:
+    autoInstall: true
+  type: Helm
