@@ -1,0 +1,21 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.9.0'
+  labels:
+    addon.kubeblocks.io/model: other
+    addon.kubeblocks.io/name: solr
+    addon.kubeblocks.io/provider: community
+    addon.kubeblocks.io/version: 0.9.0
+  name: solr
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: Solr is the popular, blazing-fast, open source enterprise search platform
+    built on Apache Lucene.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/solr-0.9.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm
