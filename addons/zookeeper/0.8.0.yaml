@@ -4,7 +4,7 @@ metadata:
   annotations:
     addon.kubeblocks.io/kubeblocks-version: '>=0.7.0'
   labels:
-    addon.kubeblocks.io/model: other
+    addon.kubeblocks.io/model: middleware
     addon.kubeblocks.io/name: zookeeper
     addon.kubeblocks.io/provider: community
     addon.kubeblocks.io/version: 0.8.0
