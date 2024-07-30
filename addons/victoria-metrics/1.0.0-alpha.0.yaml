@@ -1,0 +1,21 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.8.0'
+  labels:
+    addon.kubeblocks.io/model: tsdb
+    addon.kubeblocks.io/name: victoria-metrics
+    addon.kubeblocks.io/provider: community
+    addon.kubeblocks.io/version: 1.0.0-alpha.0
+  name: victoria-metrics
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: VictoriaMetrics is a fast, cost-effective and scalable monitoring solution
+    and time series database.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/victoria-metrics-1.0.0-alpha.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm

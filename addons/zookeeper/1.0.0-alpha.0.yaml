@@ -1,0 +1,22 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.9.0'
+  labels:
+    addon.kubeblocks.io/model: middleware
+    addon.kubeblocks.io/name: zookeeper
+    addon.kubeblocks.io/provider: community
+    addon.kubeblocks.io/version: 1.0.0-alpha.0
+  name: zookeeper
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: Apache ZooKeeper is a centralized service for maintaining configuration
+    information, naming, providing distributed synchronization, and providing group
+    services.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/zookeeper-1.0.0-alpha.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm

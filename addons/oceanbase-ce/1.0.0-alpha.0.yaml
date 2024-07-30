@@ -1,0 +1,24 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.9.0'
+  labels:
+    addon.kubeblocks.io/model: RDBMS
+    addon.kubeblocks.io/name: oceanbase-ce
+    addon.kubeblocks.io/provider: community
+    addon.kubeblocks.io/version: 1.0.0-alpha.0
+  name: oceanbase-ce
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: Unlimited scalable distributed database for data-intensive transactional
+    and real-time operational analytics workloads, with ultra-fast performance that
+    has once achieved world records in the TPC-C benchmark test. OceanBase has served
+    over 400 customers across the globe and has been supporting all mission critical
+    systems in Alipay.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/oceanbase-ce-1.0.0-alpha.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm
