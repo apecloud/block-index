@@ -1,0 +1,20 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=1.0.0'
+  labels:
+    addon.kubeblocks.io/model: RDBMS
+    addon.kubeblocks.io/name: postgresql
+    addon.kubeblocks.io/provider: community
+    addon.kubeblocks.io/version: 1.0.0
+  name: postgresql
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: A PostgreSQL (with Patroni HA) cluster definition Helm chart for Kubernetes
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/postgresql-1.0.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm
