@@ -1,0 +1,22 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=1.0.0'
+  labels:
+    addon.kubeblocks.io/model: RDBMS
+    addon.kubeblocks.io/name: vanilla-postgresql
+    addon.kubeblocks.io/provider: apecloud
+    addon.kubeblocks.io/version: 1.0.1-beta.0
+  name: vanilla-postgresql
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: Vanilla-PostgreSQL is compatible with the native PostgreSQL kernel,
+    enabling it to quickly provide HA solutions for various variants based on the
+    native PostgreSQL kernel.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/vanilla-postgresql-1.0.1-beta.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm

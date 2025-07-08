@@ -1,0 +1,22 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=1.0.0'
+  labels:
+    addon.kubeblocks.io/model: time-series
+    addon.kubeblocks.io/name: tdengine
+    addon.kubeblocks.io/provider: community
+    addon.kubeblocks.io/version: 1.0.1-beta.0
+  name: tdengine
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: TDengine is an open source, high-performance, cloud native time-series
+    database optimized for Internet of Things (IoT), Connected Cars, Industrial IoT
+    and DevOps.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/tdengine-1.0.1-beta.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm

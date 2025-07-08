@@ -1,0 +1,21 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.9.0'
+  labels:
+    addon.kubeblocks.io/model: RDBMS
+    addon.kubeblocks.io/name: mariadb
+    addon.kubeblocks.io/provider: community
+    addon.kubeblocks.io/version: 1.0.1-beta.0
+  name: mariadb
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: MariaDB is a high performance open source relational database management
+    system that is widely used for web and application servers
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/mariadb-1.0.1-beta.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm

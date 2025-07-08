@@ -1,0 +1,22 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=1.0.0'
+  labels:
+    addon.kubeblocks.io/model: RDBMS
+    addon.kubeblocks.io/name: orioledb
+    addon.kubeblocks.io/provider: community
+    addon.kubeblocks.io/version: 1.0.1-beta.0
+  name: orioledb
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: OrioleDB is a new storage engine for PostgreSQL, bringing a modern
+    approach to database capacity, capabilities and performance to the world's most-loved
+    database platform.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/orioledb-1.0.1-beta.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm
