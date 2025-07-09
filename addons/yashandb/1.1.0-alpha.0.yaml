@@ -1,0 +1,29 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=1.0.0'
+  labels:
+    addon.kubeblocks.io/model: RDBMS
+    addon.kubeblocks.io/name: yashandb
+    addon.kubeblocks.io/provider: community
+    addon.kubeblocks.io/version: 1.1.0-alpha.0
+  name: yashandb
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: YashanDB is a new database system completely independently designed
+    and developed by SICS. Based on classical database theories, it incorporates original
+    Bounded Evaluation theory, Approximation theory, Parallel Scalability theory and
+    Cross-Modal Fusion Computation theory, supports multiple deployment methods such
+    as stand-alone/primary-standby, shared cluster, and distributed ones, covers OLTP/HTAP/OLAP
+    transactions and analyzes mixed load scenarios, and is fully compatible with privatization
+    and cloud infrastructure, providing clients with one-stop enterprise-level converged
+    data management solutions to meet the needs of key industries such as finance,
+    government, telecommunications and energy for high performance, concurrency and
+    security.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/yashandb-1.1.0-alpha.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm
