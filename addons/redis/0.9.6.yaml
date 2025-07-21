@@ -1,0 +1,22 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.9.0'
+  labels:
+    addon.kubeblocks.io/model: key-value
+    addon.kubeblocks.io/name: redis
+    addon.kubeblocks.io/provider: apecloud
+    addon.kubeblocks.io/version: 0.9.6
+  name: redis
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: 'Redis is an in-memory database that persists on disk. The data model
+    is key-value, but many different kind of values are supported: Strings, Lists,
+    Sets, Sorted Sets, Hashes, Streams, HyperLogLogs, Bitmaps.'
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/redis-0.9.6.tgz
+  installable:
+    autoInstall: true
+  type: Helm
