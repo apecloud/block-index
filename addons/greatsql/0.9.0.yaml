@@ -1,0 +1,21 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=0.9.0'
+  labels:
+    addon.kubeblocks.io/model: RDBMS
+    addon.kubeblocks.io/name: greatsql
+    addon.kubeblocks.io/provider: community
+    addon.kubeblocks.io/version: 0.9.0
+  name: greatsql
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: GreatSQL is an open-source, free database that can meet financial-grade
+    application scenarios on ordinary hardware.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/greatsql-0.9.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm
