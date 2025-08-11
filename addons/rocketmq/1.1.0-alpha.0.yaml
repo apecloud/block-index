@@ -1,0 +1,22 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=1.0.0'
+  labels:
+    addon.kubeblocks.io/model: streaming
+    addon.kubeblocks.io/name: rocketmq
+    addon.kubeblocks.io/provider: apecloud
+    addon.kubeblocks.io/version: 1.1.0-alpha.0
+  name: rocketmq
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: RocketMQ is a distributed messaging and streaming platform originally
+    developed by Alibaba, featuring high throughput, low latency, and strong reliability
+    for processing millions of messages per second.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/rocketmq-1.1.0-alpha.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm
