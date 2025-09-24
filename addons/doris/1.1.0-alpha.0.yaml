@@ -1,0 +1,26 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=1.0.0'
+  labels:
+    addon.kubeblocks.io/model: RDBMS
+    addon.kubeblocks.io/name: doris
+    addon.kubeblocks.io/provider: community
+    addon.kubeblocks.io/version: 1.1.0-alpha.0
+  name: doris
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: Apache Doris is an MPP-based real-time data warehouse known for its
+    high query speed. For queries on large datasets, it returns results in sub-seconds.
+    It supports both high-concurrency point queries and high-throughput complex analysis.
+    It can be used for report analysis, ad-hoc queries, unified data warehouse, and
+    data lake query acceleration. Based on Apache Doris, users can build applications
+    for user behavior analysis, A/B testing platform, log analysis, user profile analysis,
+    and e-commerce order analysis.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/doris-1.1.0-alpha.0.tgz
+  installable:
+    autoInstall: true
+  type: Helm
