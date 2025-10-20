@@ -12,9 +12,7 @@ metadata:
 spec:
   defaultInstallValues:
   - enabled: true
-  description: 'FalkorDB is an in-memory graph database that persists on disk. The
-    data model is key-value, but many different kind of values are supported: Strings,
-    Lists, Sets, Sorted Sets, Hashes, Streams, HyperLogLogs, Bitmaps.'
+  description: FalkorDB is an in-memory graph database based on Redis.
   helm:
     chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/falkordb-1.0.1.tgz
   installable:
