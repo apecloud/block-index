@@ -1,0 +1,19 @@
+apiVersion: extensions.kubeblocks.io/v1alpha1
+kind: Addon
+metadata:
+  annotations:
+    addon.kubeblocks.io/kubeblocks-version: '>=1.2.0'
+  labels:
+    addon.kubeblocks.io/name: rustfs
+    addon.kubeblocks.io/version: 0.1.2
+  name: rustfs
+spec:
+  defaultInstallValues:
+  - enabled: true
+  description: RustFS is an S3-compatible high-performance distributed object storage
+    system written in Rust.
+  helm:
+    chartLocationURL: https://jihulab.com/api/v4/projects/150246/packages/helm/stable/charts/rustfs-0.1.2.tgz
+  installable:
+    autoInstall: true
+  type: Helm
